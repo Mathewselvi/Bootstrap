@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kulam Retro Cafe</title>
+
+    <!-- Font Awesome Cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+        integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap Cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Google Fonts Cdn -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f7f1e6;
+            color: #3d2b1f;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        h1, h5.card-title {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #f7f1e6;
+            border-bottom: 1px solid rgba(61, 43, 31, 0.12);
+        }
+
+        .navbar-brand {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            letter-spacing: 0.5px;
+            color: #3d2b1f;
+        }
+
+        .nav-link {
+            color: #3d2b1f;
+            font-weight: 500;
+        }
+
+        .nav-link.active,
+        .nav-link:hover {
+            color: #7b4a2d;
+        }
+
+        /* Buttons */
+        .btn-primary {
+            background-color: #7b4a2d;
+            border-color: #7b4a2d;
+            padding: 8px 22px;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #5f3a22;
+            border-color: #5f3a22;
+            transform: translateY(-1px);
+        }
+
+        .btn-outline-primary {
+            color: #7b4a2d;
+            border-color: #7b4a2d;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: #7b4a2d;
+            border-color: #7b4a2d;
+        }
+
+        /* Hero */
+        .hero-img {
+            height: 340px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        /* Menu cards */
+        .card {
+            background-color: #fffaf0;
+            border: none;
+            border-radius: 1rem;
+            box-shadow: 0 4px 16px rgba(61, 43, 31, 0.1);
+            transition: box-shadow 0.2s ease;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 24px rgba(61, 43, 31, 0.16);
+        }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .price {
+            font-weight: 600;
+            color: #a5762f;
+            letter-spacing: 0.3px;
+        }
+
+        /* Dark sections */
+        #about,
+        #contact,
+        footer {
+            background-color: #3d2b1f;
+            color: #f7f1e6;
+        }
+
+        #about h1,
+        #contact h1 {
+            font-size: 2rem;
+        }
+
+        #about img {
+            border-radius: 1rem;
+        }
+
+        #contact .form-control {
+            background-color: #4a352685;
+            border-color: rgba(247, 241, 230, 0.25);
+            color: #f7f1e6;
+        }
+
+        #contact .form-control:focus {
+            background-color: #4a3526;
+            border-color: #cf9a2c;
+            color: #f7f1e6;
+            box-shadow: none;
+        }
+
+        #contact .form-control::placeholder {
+            color: rgba(247, 241, 230, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="sticky-top navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Kulam Retro Cafe</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <a href="#contact" class="btn btn-outline-primary">Reserve a Table</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero secton -->
+    <div id="home" class="container mt-5">
+        <div class="row align-items-center justify-content-center g-4">
+            <div class="col-lg-6 text-center text-lg-start">
+                <h1 class="display-5">Welcome to Kulam Retro Cafe</h1>
+                <p class="fs-5">"Sip the Nostalgia, Taste the Tradition"<br>
+                    Old-school filter coffee and snacks, served the way they used to be.</p>
+                <a href="#menu" class="btn btn-primary">Explore Menu</a>
+            </div>
+            <div class="col-lg-6">
+                <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=900&q=80"
+                    class="rounded-4 hero-img" alt="A cup of retro filter coffee">
+            </div>
+        </div>
+    </div>
+
+    <!-- card secton -->
+    <section id="menu" class="container my-5 py-5">
+        <div class="text-center mb-5">
+            <h1>Our Menu</h1>
+            <p class="fs-5">A few old favourites, made fresh every day.</p>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=80"
+                        class="card-img-top" alt="Filter coffee">
+                    <div class="card-body">
+                        <h5 class="card-title">Old Madras Filter Coffee</h5>
+                        <p class="card-text">Rich decoction, poured hot and frothy — just like it used to be made
+                            in the old days.</p>
+                        <p class="card-text price">Price: ₹49</p>
+                        <a href="#" class="btn btn-primary">Get Craving</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="https://images.unsplash.com/photo-1630383249896-424e482df921?auto=format&fit=crop&w=700&q=80"
+                        class="card-img-top" alt="Masala dosa">
+                    <div class="card-body">
+                        <h5 class="card-title">Retro Masala Dosa</h5>
+                        <p class="card-text">Crispy dosa with spiced potato filling and coconut chutney, served
+                            the classic way.</p>
+                        <p class="card-text price">Price: ₹99</p>
+                        <a href="#" class="btn btn-primary">Get Craving</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=700&q=80"
+                        class="card-img-top" alt="Bun butter jam">
+                    <div class="card-body">
+                        <h5 class="card-title">Vintage Bun Butter Jam</h5>
+                        <p class="card-text">Soft bakery bun toasted with butter and jam, a good old tea-time
+                            favourite.</p>
+                        <p class="card-text price">Price: ₹59</p>
+                        <a href="#" class="btn btn-primary">Get Craving</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=800&q=80"
+                        class="img-fluid" alt="Retro cafe interior">
+                </div>
+                <div class="col-lg-6">
+                    <h1>About Kulam</h1>
+                    <p class="fs-5">In Tamil, "Kulam" means a pond — the old village spot where people gathered
+                        to talk and share their day. That's the feeling we wanted for this cafe.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <h1>Contact Us</h1>
+                    <p class="fs-5 mt-3">Drop by, call ahead, or just send us a note.</p>
+                </div>
+                <form class="col-lg-7">
+                    <div class="mb-3">
+                        <label for="exampleInputName" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="exampleInputName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text text-white-50">We'll never share your email with
+                            anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputText" class="form-label">Message</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <p class="text-center p-3 m-0" style="background-color:#3d2b1f;color:#f7f1e6;">&copy; 2026 Kulam Retro Cafe.
+        All rights reserved</p>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
